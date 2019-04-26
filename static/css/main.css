@@ -1,0 +1,12 @@
+.container {
+    position: center;
+    text-align: center;
+}
+.todo-row {
+    background: ghostwhite;
+    color: black;
+    flex-direction: column;
+}
+.todo-column {
+    width: 33.33%;
+}
