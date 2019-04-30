@@ -34,10 +34,10 @@ def get_all():
 
 # For url query parameters, we use request.args
 # For form input, we use request.form
-@app.route("/add",methods=['POST'])
+@app.route("/add",methods=['POST','GET'])
 def add_book():
-    title=request.args.get('title')
-    content=request.args.get('content')
+    title=request.form.get('title')
+    content=request.form.get('content')
     try:
         todo=Todo(title=title,content=content)
         db.session.add(todo)
