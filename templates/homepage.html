@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><%= name%></title>
-    <link type="text/css" href="../static/css/main.css" rel="stylesheet"/>
+    <title>{{ name }}</title>
+    <link type="text/css" href="{{ url_for('static', filename = 'css/main.css', _external = True) }}" rel="stylesheet"/>
 </head>
 <body>
     <div class="container">
@@ -15,11 +15,8 @@
                 <td class="todo-column">
                     Content
                 </td>
-                <td class="todo-column">
-                    Date
-                </td>
             </tr>
-        <% allTodos.forEach( todo =>{%>
+        {% allTodos.forEach( todo =>{%}
             <tr class="todo-row">
                 <td class="todo-column">
                     <%= todo.title%>
