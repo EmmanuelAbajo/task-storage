@@ -46,6 +46,11 @@ def add_book():
     except Exception as e:
            return jsonify({'Error': str(e)})
 
+## TODO: Add client side functionality for add end point
+# - Validate both inputs
+# - Store form data in user sessions'
+# - redirect to add endpoint
+# - render homepage.html template
 
 if __name__ == '__main__':
     app.run()
