@@ -1,0 +1,6 @@
+.env
+__pycache__/
+newvenv
+todos.sqlite
+database.py
+.vscode
