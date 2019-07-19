@@ -1,4 +1,4 @@
-from . import db
+from app import db
 
 class Todo(db.Model):
     __tablename__ = 'todo-list'
@@ -26,7 +26,7 @@ class Todo(db.Model):
             'dateCreated': self.dateCreated
         }
         if self.dateCreated != self.dateModified:
-            data.update('dateModified',self.dateModified)
+            data.update({'dateModified':self.dateModified})
 
         return data
         
