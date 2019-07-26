@@ -14,4 +14,9 @@ class TodoDTO:
     todoModel = api.model(name='todo options', model= todoOptions)
 
 class UserDTO:
-    pass
+    api = Namespace('users',description='user management')
+    userOptions = {
+                'username': fields.String(required=True,description='username'),
+                'password': fields.String(required=True,description='password')
+            }
+    userModel = api.model(name='userModel', model= userOptions)
